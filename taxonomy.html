@@ -1,0 +1,1351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taxonomie - Austrian Baroque Corpus</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="navigation"><div class="nav-links">
+<a href="persons_register.html" class="nav-link"><span class="nav-icon">👥</span>
+                    Register der Personen
+                </a><a href="places_register.html" class="nav-link"><span class="nav-icon">🗺️</span>
+                    Register der Orte
+                </a><a href="taxonomy.html" class="nav-link active"><span class="nav-icon">📚</span>
+                    Taxonomie
+                </a><a href="documents.html" class="nav-link"><span class="nav-icon">📖</span>
+                    Dokumente
+                </a>
+</div></nav><header><h1 class="header-title">Linguistische Taxonomie</h1>
+<div class="header-subtitle">ABaC:us - Austrian Baroque Corpus</div>
+<div class="credits">
+                Herausgegeben von:
+                Ulrike Czeitschner, Claudia Resch</div></header><div class="controls">
+<input type="text" class="search-box" placeholder="Kategorie suchen..." id="searchBox"><select class="sort-select" id="sortSelect"><option value="id">Nach ID sortieren</option>
+<option value="name">Nach Name sortieren</option>
+<option value="type">Nach Typ sortieren</option>
+<option value="frequency-desc">Häufigste Tags</option>
+<option value="frequency-asc">Seltenste Tags</option></select><select class="filter-select" id="categoryFilterSelect"><option value="all">Alle Kategorien</option>
+<option value="postags">Stuttgart-Tübingen-TagSet</option>
+<option value="cf1">Kontrahierte Formen I</option>
+<option value="cf2">Kontrahierte Formen II</option></select>
+</div>
+<div class="stats">
+<div class="stat-item">
+<div class="stat-number" id="totalCategories">84</div>
+<div class="stat-label">Kategorien gesamt</div>
+</div>
+<div class="stat-item">
+<div class="stat-number" id="mainCategories">3</div>
+<div class="stat-label">Hauptkategorien</div>
+</div>
+<div class="stat-item">
+<div class="stat-number" id="subCategories">81</div>
+<div class="stat-label">Unterkategorien</div>
+</div>
+<div class="stat-item">
+<div class="stat-number" id="visibleCategories">84</div>
+<div class="stat-label">Sichtbare Kategorien</div>
+</div>
+</div>
+<div class="chart-section">
+<h2 class="chart-title">Tag-Häufigkeiten Visualisierung</h2>
+<div class="chart-controls">
+<button class="chart-btn active" id="topTagsBtn">Top 20 Tags</button><button class="chart-btn" id="allTagsBtn">Alle Tags</button><button class="chart-btn" id="categoryBtn">Nach Kategorien</button>
+</div>
+<div class="chart-container"><canvas id="frequencyChart" width="800" height="400"></canvas></div>
+</div>
+<div class="taxonomy-container"><div class="taxonomy-section" data-taxonomy-id="postags">
+<h2 class="taxonomy-title">Stuttgart-Tübingen-TagSet</h2>
+<div class="person-grid taxonomy-grid" id="taxonomyGrid">
+<div class="person-card taxonomy-card" data-name="adja" data-description="attributives adjektiv" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="9737">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">ADJA<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">9,737</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">attributives Adjektiv</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="adjd" data-description="adverbiales oder prädikatives adjektiv" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="3399">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">ADJD<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">3,399</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">adverbiales oder prädikatives Adjektiv</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="adjd_vvpp" data-description="adjd_vvpp" data-parent="cf2" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">ADJD_VVPP<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">ADJD_VVPP</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf2</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="adv" data-description="adverb" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="11152">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">ADV<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">11,152</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Adverb</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="advart" data-description="advart" data-parent="advc" data-level="2" data-type="postags" data-frequency="1">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">ADVART<span class="taxonomy-level-badge level-2">
+                                                Level 3</span><span class="tag-count-badge">1</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">ADVART</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">advc</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="adv_adv" data-description="adv_adv" data-parent="cf2" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">ADV_ADV<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">ADV_ADV</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf2</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="appo" data-description="postposition" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="65">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">APPO<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">65</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Postposition</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="appr" data-description="präposition; zirkumposition links" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="10108">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">APPR<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">10,108</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Präposition; Zirkumposition links</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="apprart" data-description="präposition mit artikel" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="960">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">APPRART<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">960</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Präposition mit Artikel</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="appr_apzr" data-description="appr_apzr" data-parent="cf2" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">APPR_APZR<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">APPR_APZR</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf2</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="appr_nn" data-description="appr_nn" data-parent="cf2" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">APPR_NN<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">APPR_NN</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf2</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="apzr" data-description="zirkumposition rechts" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="48">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">APZR<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">48</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Zirkumposition rechts</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="art" data-description="bestimmter oder unbestimmter artikel" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="15088">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">ART<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">15,088</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">bestimmter oder unbestimmter Artikel</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="artnn" data-description="artnn" data-parent="nomc" data-level="2" data-type="postags" data-frequency="1">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">ARTNN<span class="taxonomy-level-badge level-2">
+                                                Level 3</span><span class="tag-count-badge">1</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">ARTNN</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">nomc</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="art_nn" data-description="art_nn" data-parent="cf2" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">ART_NN<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">ART_NN</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf2</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="card" data-description="kardinalzahl" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="2201">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">CARD<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">2,201</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Kardinalzahl</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="fm" data-description="fremdsprachliches material" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="5384">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">FM<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">5,384</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Fremdsprachliches Material</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="fm_fm" data-description="fm_fm" data-parent="cf2" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">FM_FM<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">FM_FM</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf2</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="itj" data-description="interjektion" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="498">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">ITJ<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">498</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Interjektion</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="kokom" data-description="vergleichskonjunktion" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="1088">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">KOKOM<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">1,088</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Vergleichskonjunktion</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="kon" data-description="nebenordnende konjunktion" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="7012">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">KON<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">7,012</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">nebenordnende Konjunktion</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="koui" data-description="unterordnende konjunktion mit ``zu'' und infinitiv" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="10">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">KOUI<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">10</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">unterordnende Konjunktion mit ``zu'' und Infinitiv</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="kous" data-description="unterordnende konjunktion mit satz" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="3795">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">KOUS<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">3,795</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">unterordnende Konjunktion mit Satz</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="kouspper" data-description="kouspper" data-parent="conc" data-level="2" data-type="postags" data-frequency="25">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">KOUSPPER<span class="taxonomy-level-badge level-2">
+                                                Level 3</span><span class="tag-count-badge">25</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">KOUSPPER</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">conc</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="kous_pis" data-description="kous_pis" data-parent="cf2" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">KOUS_PIS<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">KOUS_PIS</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf2</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="ne" data-description="eigennamen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="2835">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">NE<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">2,835</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Eigennamen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="ne_ne" data-description="ne_ne" data-parent="cf2" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">NE_NE<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">NE_NE</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf2</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="nn" data-description="normales nomen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="29352">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">NN<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">29,352</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">normales Nomen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pav" data-description="pronominaladverb" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="692">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PAV<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">692</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Pronominaladverb</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pdat" data-description="attribuierendes demonstrativpronomen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="1102">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PDAT<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">1,102</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">attribuierendes Demonstrativpronomen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pds" data-description="substituierendes demonstrativpronomen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="1123">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PDS<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">1,123</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">substituierendes Demonstrativpronomen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pdspper" data-description="pdspper" data-parent="proc" data-level="1" data-type="postags" data-frequency="1">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PDSPPER<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">1</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">PDSPPER</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">proc</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="piat" data-description="attribuierendes indefinitpronomen ohne determiner" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="2505">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PIAT<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">2,505</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">attribuierendes Indefinitpronomen ohne Determiner</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pidat" data-description="attribuierendes indefinitpronomen mit determiner" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PIDAT<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">attribuierendes Indefinitpronomen mit Determiner</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pis" data-description="substituierendes indefinitpronomen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="2381">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PIS<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">2,381</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">substituierendes Indefinitpronomen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pispper" data-description="pispper" data-parent="proc" data-level="1" data-type="postags" data-frequency="13">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PISPPER<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">13</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">PISPPER</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">proc</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pper" data-description="irreflexives personalpronomen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="6581">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PPER<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">6,581</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">irreflexives Personalpronomen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pperpper" data-description="pperpper " data-parent="proc" data-level="1" data-type="postags" data-frequency="19">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PPERPPER<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">19</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">PPERPPER </div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">proc</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pposat" data-description="attribuierendes possessivpronomen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="2206">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PPOSAT<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">2,206</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">attribuierendes Possessivpronomen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pposs" data-description="substituierendes possessivpronomen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="32">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PPOSS<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">32</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">substituierendes Possessivpronomen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="prelat" data-description="attribuierendes relativpronomen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="110">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PRELAT<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">110</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">attribuierendes Relativpronomen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="prels" data-description="substituierendes relativpronomen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="1686">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PRELS<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">1,686</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">substituierendes Relativpronomen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="prf" data-description="reflexives personalpronomen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="1127">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PRF<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">1,127</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">reflexives Personalpronomen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="prfpper" data-description="prfpper" data-parent="proc" data-level="1" data-type="postags" data-frequency="13">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PRFPPER<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">13</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">PRFPPER</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">proc</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="ptka" data-description="partikel bei adjektiv oder adverb" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="108">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PTKA<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">108</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Partikel bei Adjektiv oder Adverb</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="ptkant" data-description="antwortpartikel" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="30">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PTKANT<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">30</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Antwortpartikel</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="ptkneg" data-description="negationspartikel" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="1623">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PTKNEG<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">1,623</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Negationspartikel</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="ptkvz" data-description="abgetrennter verbzusatz" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="627">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PTKVZ<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">627</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">abgetrennter Verbzusatz</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="ptkvz_adjd" data-description="ptkvz_adjd" data-parent="cf2" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PTKVZ_ADJD<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">PTKVZ_ADJD</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf2</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="ptkvz_ptkzu" data-description="ptkvz_ptkzu" data-parent="cf2" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PTKVZ_PTKZU<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">PTKVZ_PTKZU</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf2</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="ptkzu" data-description="``zu'' vor infinitiv" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="558">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PTKZU<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">558</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">``zu'' vor Infinitiv</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="ptkzu_vvinf" data-description="ptkzu_vvinf" data-parent="cf2" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PTKZU_VVINF<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">PTKZU_VVINF</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf2</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pwat" data-description="attribuierendes interrogativpronomen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="162">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PWAT<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">162</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">attribuierendes Interrogativpronomen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pwav" data-description="adverbiales interrogativ- oder relativpronomen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="566">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PWAV<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">566</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">adverbiales Interrogativ- oder Relativpronomen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="pws" data-description="substituierendes interrogativpronomen" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="482">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">PWS<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">482</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">substituierendes Interrogativpronomen</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="trunc" data-description="kompositions-erstglied" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="124">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">TRUNC<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">124</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Kompositions-Erstglied</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vafin" data-description="finites verb, aux" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="5159">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VAFIN<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">5,159</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">finites Verb, aux</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vafinpper" data-description="vafinpper" data-parent="verc" data-level="2" data-type="postags" data-frequency="45">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VAFINPPER<span class="taxonomy-level-badge level-2">
+                                                Level 3</span><span class="tag-count-badge">45</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">VAFINPPER</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">verc</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vaimp" data-description="imperativ, aux" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="20">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VAIMP<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">20</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Imperativ, aux</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vainf" data-description="infinitiv, aux" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="497">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VAINF<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">497</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Infinitiv, aux</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vapp" data-description="partizip perfekt, aux" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="647">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VAPP<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">647</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Partizip Perfekt, aux</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vmfin" data-description="finites verb, modal" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="1779">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VMFIN<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">1,779</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">finites Verb, modal</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vmfinpper" data-description="vmfinpper" data-parent="verc" data-level="2" data-type="postags" data-frequency="11">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VMFINPPER<span class="taxonomy-level-badge level-2">
+                                                Level 3</span><span class="tag-count-badge">11</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">VMFINPPER</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">verc</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vminf" data-description="infinitiv, modal" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="110">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VMINF<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">110</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Infinitiv, modal</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vmpp" data-description="partizip perfekt, modal" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="14">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VMPP<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">14</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Partizip Perfekt, modal</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vvfin" data-description="finites verb, voll" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="6135">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VVFIN<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">6,135</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">finites Verb, voll</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vvfinpper" data-description="vvfinpper" data-parent="verc" data-level="2" data-type="postags" data-frequency="114">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VVFINPPER<span class="taxonomy-level-badge level-2">
+                                                Level 3</span><span class="tag-count-badge">114</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">VVFINPPER</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">verc</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vvimp" data-description="imperativ, voll" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="750">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VVIMP<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">750</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Imperativ, voll</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vvimpart" data-description="vvimpart" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="2">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VVIMPART<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">2</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">VVIMPART</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vvimppper" data-description="vvimppper" data-parent="verc" data-level="2" data-type="postags" data-frequency="17">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VVIMPPPER<span class="taxonomy-level-badge level-2">
+                                                Level 3</span><span class="tag-count-badge">17</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">VVIMPPPER</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">verc</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vvinf" data-description="infinitiv, voll" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="3397">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VVINF<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">3,397</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Infinitiv, voll</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vvizu" data-description="infinitiv mit ``zu'', voll" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="101">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VVIZU<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">101</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Infinitiv mit ``zu'', voll</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="vvpp" data-description="partizip perfekt, voll" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="4531">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">VVPP<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">4,531</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Partizip Perfekt, voll</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="xy" data-description="nichtwort, sonderzeichen enthaltend" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="42">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">XY<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">42</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Nichtwort, Sonderzeichen enthaltend</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="advc" data-description="adverb mit klitikon" data-parent="cf1" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">advc<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Adverb mit Klitikon</div>
+<div class="subcategories">
+<div class="subcategories-label">
+                                            Unterkategorien (1):
+                                        </div>
+<div class="subcategories-list"><span class="subcategory-tag">ADVART</span></div>
+</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf1</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="cf1" data-description="kontrahierte formen i" data-parent="postags" data-level="0" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">cf1<span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Kontrahierte Formen I</div>
+<div class="subcategories">
+<div class="subcategories-label">
+                                            Unterkategorien (3):
+                                        </div>
+<div class="subcategories-list">
+<span class="subcategory-tag">advc</span><span class="subcategory-tag">conc</span><span class="subcategory-tag">nomc</span>
+</div>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="cf2" data-description="kontrahierte formen ii" data-parent="postags" data-level="0" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">cf2<span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Kontrahierte Formen II</div>
+<div class="subcategories">
+<div class="subcategories-label">
+                                            Unterkategorien (11):
+                                        </div>
+<div class="subcategories-list">
+<span class="subcategory-tag">ADJD_VVPP</span><span class="subcategory-tag">ADV_ADV</span><span class="subcategory-tag">APPR_APZR</span><span class="subcategory-tag">APPR_NN</span><span class="subcategory-tag">ART_NN</span><span class="subcategory-tag">FM_FM</span><span class="subcategory-tag">KOUS_PIS</span><span class="subcategory-tag">NE_NE</span><span class="subcategory-tag">PTKVZ_ADJD</span><span class="subcategory-tag">PTKVZ_PTKZU</span><span class="subcategory-tag">PTKZU_VVINF</span>
+</div>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="conc" data-description="konjunktion mit klitikon" data-parent="cf1" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">conc<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Konjunktion mit Klitikon</div>
+<div class="subcategories">
+<div class="subcategories-label">
+                                            Unterkategorien (1):
+                                        </div>
+<div class="subcategories-list"><span class="subcategory-tag">KOUSPPER</span></div>
+</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf1</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="nomc" data-description="nomen mit klitikon" data-parent="cf1" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">nomc<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Nomen mit Klitikon</div>
+<div class="subcategories">
+<div class="subcategories-label">
+                                            Unterkategorien (1):
+                                        </div>
+<div class="subcategories-list"><span class="subcategory-tag">ARTNN</span></div>
+</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">cf1</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="proc" data-description="pronomen mit klitikon" data-parent="postags" data-level="0" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">proc<span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Pronomen mit Klitikon</div>
+<div class="subcategories">
+<div class="subcategories-label">
+                                            Unterkategorien (5):
+                                        </div>
+<div class="subcategories-list">
+<span class="subcategory-tag">PDSPPER</span><span class="subcategory-tag">PISPPER</span><span class="subcategory-tag">PPERPPER</span><span class="subcategory-tag">PRFPPER</span><span class="subcategory-tag">verc</span>
+</div>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="span" data-description="span" data-parent="sttsstd" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">span<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">span</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">sttsstd</span>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="sttsstd" data-description="stuttgart-tübingen-tagset" data-parent="postags" data-level="0" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">sttsstd<span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Stuttgart-Tübingen-TagSet</div>
+<div class="subcategories">
+<div class="subcategories-label">
+                                            Unterkategorien (53):
+                                        </div>
+<div class="subcategories-list">
+<span class="subcategory-tag">ADJA</span><span class="subcategory-tag">ADJD</span><span class="subcategory-tag">ADV</span><span class="subcategory-tag">APPO</span><span class="subcategory-tag">APPR</span><span class="subcategory-tag">APPRART</span><span class="subcategory-tag">APZR</span><span class="subcategory-tag">ART</span><span class="subcategory-tag">CARD</span><span class="subcategory-tag">FM</span><span class="subcategory-tag">ITJ</span><span class="subcategory-tag">KOKOM</span><span class="subcategory-tag">KON</span><span class="subcategory-tag">KOUI</span><span class="subcategory-tag">KOUS</span><span class="subcategory-tag">NE</span><span class="subcategory-tag">NN</span><span class="subcategory-tag">PAV</span><span class="subcategory-tag">PDAT</span><span class="subcategory-tag">PDS</span><span class="subcategory-tag">PIAT</span><span class="subcategory-tag">PIDAT</span><span class="subcategory-tag">PIS</span><span class="subcategory-tag">PPER</span><span class="subcategory-tag">PPOSAT</span><span class="subcategory-tag">PPOSS</span><span class="subcategory-tag">PRELAT</span><span class="subcategory-tag">PRELS</span><span class="subcategory-tag">PRF</span><span class="subcategory-tag">PTKA</span><span class="subcategory-tag">PTKANT</span><span class="subcategory-tag">PTKNEG</span><span class="subcategory-tag">PTKVZ</span><span class="subcategory-tag">PTKZU</span><span class="subcategory-tag">PWAT</span><span class="subcategory-tag">PWAV</span><span class="subcategory-tag">PWS</span><span class="subcategory-tag">TRUNC</span><span class="subcategory-tag">VAFIN</span><span class="subcategory-tag">VAIMP</span><span class="subcategory-tag">VAINF</span><span class="subcategory-tag">VAPP</span><span class="subcategory-tag">VMFIN</span><span class="subcategory-tag">VMINF</span><span class="subcategory-tag">VMPP</span><span class="subcategory-tag">VVFIN</span><span class="subcategory-tag">VVIMP</span><span class="subcategory-tag">VVINF</span><span class="subcategory-tag">VVIZU</span><span class="subcategory-tag">VVPP</span><span class="subcategory-tag">XY</span><span class="subcategory-tag">span</span><span class="subcategory-tag">VVIMPART</span>
+</div>
+</div>
+</div>
+<div class="person-card taxonomy-card" data-name="verc" data-description="verb mit klitikon" data-parent="proc" data-level="1" data-type="postags" data-frequency="0">
+<div class="taxonomy-header">
+<div class="person-name taxonomy-name">verc<span class="taxonomy-level-badge level-1">
+                                                Level 2</span><span class="tag-count-badge">0</span>
+</div>
+<span class="taxonomy-type-badge">POS-Tag</span>
+</div>
+<div class="taxonomy-description">Verb mit Klitikon</div>
+<div class="subcategories">
+<div class="subcategories-label">
+                                            Unterkategorien (4):
+                                        </div>
+<div class="subcategories-list">
+<span class="subcategory-tag">VAFINPPER</span><span class="subcategory-tag">VMFINPPER</span><span class="subcategory-tag">VVFINPPER</span><span class="subcategory-tag">VVIMPPPER</span>
+</div>
+</div>
+<div class="parent-info">
+<span class="parent-label">Übergeordnet:</span><span class="parent-name">proc</span>
+</div>
+</div>
+</div>
+</div></div>
+<div class="no-results hidden" id="noResults">
+            Keine Kategorien gefunden, die den Suchkriterien entsprechen.
+        </div>
+</div>
+<script>
+        const searchBox = document.getElementById('searchBox');
+        const sortSelect = document.getElementById('sortSelect');
+        const categoryFilterSelect = document.getElementById('categoryFilterSelect');
+        const taxonomyGrids = document.querySelectorAll('.taxonomy-grid');
+        const noResults = document.getElementById('noResults');
+        const visibleCategoriesCount = document.getElementById('visibleCategories');
+
+        let allCards = Array.from(document.querySelectorAll('.taxonomy-card'));
+
+        function updateVisibleCount() {
+            const visibleCards = allCards.filter(card => !card.classList.contains('hidden'));
+            visibleCategoriesCount.textContent = visibleCards.length;
+
+            const hasVisibleCards = visibleCards.length > 0;
+
+            // Show/hide taxonomy sections based on visible cards
+            taxonomyGrids.forEach(grid => {
+                const sectionCards = Array.from(grid.querySelectorAll('.taxonomy-card'));
+                const visibleSectionCards = sectionCards.filter(card => !card.classList.contains('hidden'));
+                const section = grid.closest('.taxonomy-section');
+
+                if (visibleSectionCards.length > 0) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            if (!hasVisibleCards) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        function filterAndSort() {
+            const searchTerm = searchBox.value.toLowerCase().trim();
+            const selectedCategory = categoryFilterSelect.value;
+            const sortBy = sortSelect.value;
+
+            // Filter cards
+            allCards.forEach(card => {
+                const name = card.dataset.name;
+                const description = card.dataset.description;
+                const type = card.dataset.type;
+
+                const matchesSearch = !searchTerm ||
+                    name.includes(searchTerm) ||
+                    description.includes(searchTerm);
+
+                const matchesCategory = selectedCategory === 'all' ||
+                    type === selectedCategory;
+
+                if (matchesSearch && matchesCategory) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Sort visible cards within each grid
+            taxonomyGrids.forEach(grid => {
+                const gridCards = Array.from(grid.querySelectorAll('.taxonomy-card'));
+                const visibleGridCards = gridCards.filter(card => !card.classList.contains('hidden'));
+
+                visibleGridCards.sort((a, b) => {
+                    switch(sortBy) {
+                        case 'id':
+                            return a.dataset.name.localeCompare(b.dataset.name);
+                        case 'name':
+                            return a.dataset.description.localeCompare(b.dataset.description);
+                        case 'type':
+                            const levelA = parseInt(a.dataset.level) || 0;
+                            const levelB = parseInt(b.dataset.level) || 0;
+                            return levelA - levelB;
+                        case 'frequency-desc':
+                            const freqA = parseInt(a.dataset.frequency) || 0;
+                            const freqB = parseInt(b.dataset.frequency) || 0;
+                            return freqB - freqA; // Descending order (highest first)
+                        case 'frequency-asc':
+                            const freqA2 = parseInt(a.dataset.frequency) || 0;
+                            const freqB2 = parseInt(b.dataset.frequency) || 0;
+                            return freqA2 - freqB2; // Ascending order (lowest first)
+                        default:
+                            return 0;
+                    }
+                });
+
+                // Reorder in DOM
+                visibleGridCards.forEach(card => {
+                    grid.appendChild(card);
+                });
+            });
+
+            updateVisibleCount();
+        }
+
+        searchBox.addEventListener('input', filterAndSort);
+        sortSelect.addEventListener('change', filterAndSort);
+        categoryFilterSelect.addEventListener('change', filterAndSort);
+
+        // Initialize
+        filterAndSort();
+
+        // Chart functionality
+        const tagData = {
+            'NN': 29352, 'ART': 15088, 'ADV': 11152, 'APPR': 10108, 'ADJA': 9737,
+            'KON': 7012, 'PPER': 6581, 'VVFIN': 6135, 'FM': 5384, 'VAFIN': 5159,
+            'VVPP': 4531, 'KOUS': 3795, 'ADJD': 3399, 'VVINF': 3397, 'NE': 2835,
+            'PIAT': 2505, 'PIS': 2381, 'PPOSAT': 2206, 'CARD': 2201, 'VMFIN': 1779,
+            'PRELS': 1686, 'PTKNEG': 1623, 'PRF': 1127, 'PDS': 1123, 'PDAT': 1102,
+            'KOKOM': 1088, 'APPRART': 960, 'VVIMP': 750, 'PAV': 692, 'VAPP': 647,
+            'PTKVZ': 627, 'PWAV': 566, 'PTKZU': 558, 'ITJ': 498, 'VAINF': 497,
+            'PWS': 482, 'PWAT': 162, 'TRUNC': 124, 'VVFINPPER': 114, 'VMINF': 110,
+            'PRELAT': 110, 'PTKA': 108, 'VVIZU': 101, 'APPO': 65, 'APZR': 48,
+            'VAFINPPER': 45, 'XY': 42, 'PPOSS': 32, 'PTKANT': 30, 'KOUSPPER': 25,
+            'VAIMP': 20, 'PPERPPER': 19, 'VVIMPPPER': 17, 'VMPP': 14, 'PRFPPER': 13,
+            'PISPPER': 13, 'VMFINPPER': 11, 'KOUI': 10, 'VVIMPART': 2, 'PDSPPER': 1,
+            'ARTNN': 1, 'ADVART': 1
+        };
+
+        let chart;
+        const ctx = document.getElementById('frequencyChart').getContext('2d');
+
+        function createChart(data, title, type = 'bar') {
+            if (chart) {
+                chart.destroy();
+            }
+
+            const labels = Object.keys(data);
+            const values = Object.values(data);
+
+            chart = new Chart(ctx, {
+                type: type,
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Häufigkeit',
+                        data: values,
+                        backgroundColor: [
+                            '#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6',
+                            '#1abc9c', '#34495e', '#e67e22', '#95a5a6', '#16a085',
+                            '#27ae60', '#2980b9', '#8e44ad', '#f1c40f', '#d35400'
+                        ].concat(Array(labels.length).fill('#bdc3c7')),
+                        borderColor: '#34495e',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: title,
+                            font: { size: 16, weight: 'bold' }
+                        },
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Anzahl Vorkommen'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'POS-Tags'
+                            },
+                            ticks: {
+                                maxRotation: 45
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function showTopTags() {
+            const sortedData = Object.entries(tagData)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 20)
+                .reduce((obj, [key, val]) => ({ ...obj, [key]: val }), {});
+            createChart(sortedData, 'Top 20 häufigste POS-Tags');
+        }
+
+        function showAllTags() {
+            const sortedData = Object.entries(tagData)
+                .sort((a, b) => b[1] - a[1])
+                .reduce((obj, [key, val]) => ({ ...obj, [key]: val }), {});
+            createChart(sortedData, 'Alle POS-Tags nach Häufigkeit');
+        }
+
+        function showByCategory() {
+            const categories = {
+                'Nomen & Artikel': ['NN', 'ART', 'NE', 'APPRART'],
+                'Adjektive & Adverbien': ['ADJA', 'ADJD', 'ADV'],
+                'Verben': ['VVFIN', 'VAFIN', 'VVPP', 'VVINF', 'VMFIN', 'VVIMP', 'VAPP', 'VAINF'],
+                'Pronomen': ['PPER', 'PIAT', 'PIS', 'PPOSAT', 'PRELS', 'PRF', 'PDS', 'PDAT'],
+                'Konjunktionen': ['KON', 'KOUS', 'KOKOM', 'KOUI'],
+                'Partikeln': ['PTKNEG', 'PTKVZ', 'PTKZU', 'PTKA', 'PTKANT'],
+                'Präpositionen': ['APPR', 'APPO', 'APZR'],
+                'Sonstiges': ['FM', 'CARD', 'PAV', 'PWAV', 'PWS', 'PWAT', 'ITJ', 'TRUNC', 'XY']
+            };
+
+            const categoryData = {};
+            Object.entries(categories).forEach(([category, tags]) => {
+                categoryData[category] = tags.reduce((sum, tag) => sum + (tagData[tag] || 0), 0);
+            });
+
+            createChart(categoryData, 'POS-Tags gruppiert nach Kategorien');
+        }
+
+        // Chart button event listeners
+        document.getElementById('topTagsBtn').addEventListener('click', function() {
+            document.querySelectorAll('.chart-btn').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            showTopTags();
+        });
+
+        document.getElementById('allTagsBtn').addEventListener('click', function() {
+            document.querySelectorAll('.chart-btn').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            showAllTags();
+        });
+
+        document.getElementById('categoryBtn').addEventListener('click', function() {
+            document.querySelectorAll('.chart-btn').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            showByCategory();
+        });
+
+        // Initialize chart with top tags
+        showTopTags();
+    </script>
+</body>
+</html>
