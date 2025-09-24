@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="ABC Register" default="all">
+
+    <!-- Define properties -->
+    <property name="data.dir" value="../../data"/>
+    <property name="editions.dir" value="${data.dir}/editions"/>
+    <property name="register.dir" value="${data.dir}/register"/>
+    <property name="xslt.dir" value="../xslt"/>
+    <property name="output.dir" value="../../public"/>
+    <property name="saxon.dir" value="../../saxon"/>
+
+    <!-- Define classpath for Saxon -->
+    <path id="saxon.classpath">
+        <fileset dir="${saxon.dir}">
+            <include name="saxon9he.jar"/>
+        </fileset>
+    </path>
+
+    <!-- Main target to build all HTML files -->
+    <target name="all" depends="clean, documents, persons, places, taxonomy, document-reader">
+        <echo message="All HTML files generated successfully!"/>
+    </target>
+
+    <!-- Clean output directory -->
+    <target name="clean">
+        <echo message="Cleaning output directory..."/>
+        <delete>
+            <fileset dir="${output.dir}" includes="*.html"/>
+        </delete>
+    </target>
+
+    <!-- Generate documents overview page -->
+    <target name="documents">
+        <echo message="Generating documents.html..."/>
+        <xslt basedir="${editions.dir}"
+              destdir="${output.dir}"
+              style="${xslt.dir}/transform_documents.xsl"
+              includes="Abraham-Augustini_feuriges_Hertz.xml"
+              out="${output.dir}/documents.html"
+              force="true"
+              classpathref="saxon.classpath">
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        </xslt>
+    </target>
+
+    <!-- Generate persons register page -->
+    <target name="persons">
+        <echo message="Generating persons_register.html..."/>
+        <xslt in="${register.dir}/abc_register_persons.xml"
+              out="${output.dir}/persons_register.html"
+              style="${xslt.dir}/transform_persons.xsl"
+              force="true"
+              classpathref="saxon.classpath">
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        </xslt>
+    </target>
+
+    <!-- Generate places register page -->
+    <target name="places">
+        <echo message="Generating places_register.html..."/>
+        <xslt in="${register.dir}/abc_register_places.xml"
+              out="${output.dir}/places_register.html"
+              style="${xslt.dir}/transform_places.xsl"
+              force="true"
+              classpathref="saxon.classpath">
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        </xslt>
+    </target>
+
+    <!-- Generate taxonomy page -->
+    <target name="taxonomy">
+        <echo message="Generating taxonomy.html..."/>
+        <xslt in="${register.dir}/abacus.xml"
+              out="${output.dir}/taxonomy.html"
+              style="${xslt.dir}/transform_taxonomy.xsl"
+              force="true"
+              classpathref="saxon.classpath">
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        </xslt>
+    </target>
+
+    <!-- Generate individual document reader pages -->
+    <target name="document-reader">
+        <echo message="Generating individual document pages..."/>
+        <xslt basedir="${editions.dir}"
+              destdir="${output.dir}"
+              style="${xslt.dir}/transform_document_reader.xsl"
+              includes="*.xml"
+              extension=".html"
+              force="true"
+              classpathref="saxon.classpath">
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+            <mapper type="glob" from="*.xml" to="document_*.html"/>
+        </xslt>
+    </target>
+
+</project>
