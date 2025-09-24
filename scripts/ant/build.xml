@@ -25,7 +25,7 @@
     <target name="clean">
         <echo message="Cleaning output directory..."/>
         <delete>
-            <fileset dir="${output.dir}" includes="*.html"/>
+            <fileset dir="${output.dir}" includes="*.html" excludes="documents.html"/>
         </delete>
     </target>
 
