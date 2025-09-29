@@ -17,7 +17,7 @@
     </path>
 
     <!-- Main target to build all HTML files -->
-    <target name="all" depends="clean, documents, persons, places, taxonomy, document-reader">
+    <target name="all" depends="clean, index, documents, persons, places, taxonomy, document-reader">
         <echo message="All HTML files generated successfully!"/>
     </target>
 
@@ -27,6 +27,18 @@
         <delete>
             <fileset dir="${output.dir}" includes="*.html" excludes="documents.html"/>
         </delete>
+    </target>
+
+    <!-- Generate index page -->
+    <target name="index">
+        <echo message="Generating index.html..."/>
+        <xslt in="${register.dir}/abc_register_persons.xml"
+              out="${output.dir}/index.html"
+              style="${xslt.dir}/transform_index.xsl"
+              force="true"
+              classpathref="saxon.classpath">
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        </xslt>
     </target>
 
     <!-- Generate documents overview page -->

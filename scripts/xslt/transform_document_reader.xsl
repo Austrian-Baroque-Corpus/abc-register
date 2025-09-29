@@ -19,6 +19,10 @@
     <div class="container">
         <nav class="navigation">
             <div class="nav-links">
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon">🏠</span>
+                    Startseite
+                </a>
                 <a href="persons_register.html" class="nav-link">
                     <span class="nav-icon">👥</span>
                     Register der Personen
