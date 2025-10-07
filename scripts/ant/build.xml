@@ -32,7 +32,7 @@
     <!-- Generate index page -->
     <target name="index">
         <echo message="Generating index.html..."/>
-        <xslt in="${register.dir}/abc_register_persons.xml"
+        <xslt in="${register.dir}/abacus-index_persnames.xml"
               out="${output.dir}/index.html"
               style="${xslt.dir}/transform_index.xsl"
               force="true"
@@ -58,7 +58,7 @@
     <!-- Generate persons register page -->
     <target name="persons">
         <echo message="Generating persons_register.html..."/>
-        <xslt in="${register.dir}/abc_register_persons.xml"
+        <xslt in="${register.dir}/abacus-index_persnames.xml"
               out="${output.dir}/persons_register.html"
               style="${xslt.dir}/transform_persons.xsl"
               force="true"
@@ -70,7 +70,7 @@
     <!-- Generate places register page -->
     <target name="places">
         <echo message="Generating places_register.html..."/>
-        <xslt in="${register.dir}/abc_register_places.xml"
+        <xslt in="${register.dir}/abacus-index_placenames.xml"
               out="${output.dir}/places_register.html"
               style="${xslt.dir}/transform_places.xsl"
               force="true"
